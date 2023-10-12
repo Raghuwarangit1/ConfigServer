@@ -1,0 +1,16 @@
+server:
+ port:8181
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+ boot:
+  admin:
+   client:
+    url:http://localhost:2222/admin
