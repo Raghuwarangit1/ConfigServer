@@ -1,1 +1,16 @@
-
+spring:
+  cloud:
+    gateway:
+      discovery.locator:
+        enabled: true
+      routes:
+      - id: welcome
+        uri: lb://welcome
+        predicates:
+        - Path=/welcome
+      - id: greet
+        uri: lb://greet
+        predicates:
+        - Path=/greet
+  server:
+ port: 3333
